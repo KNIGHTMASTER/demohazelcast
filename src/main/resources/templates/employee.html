@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Iteration in Thymeleaf Template Engine!!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Employees</h1>
+<h2 th:text="${data.elapsedTime} "></h2>
+<form action="#" th:action="@{/employee/cache}" method="get">
+    <input type="submit" value="Cache" />
+</form>
+<form action="#" th:action="@{/employee/nocache}" method="get">
+    <input type="submit" value="No Cache" />
+</form>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>CODE</th>
+        <th>NAME</th>
+        <th>REMARKS</th>
+    </tr>
+    <tr th:each="emp: ${data.employees}">
+        <td th:text="${emp.id}">001</td>
+        <td th:text="${emp.code}">Code</td>
+        <td th:text="${emp.name}">Name</td>
+        <td th:text="${emp.remarks}">Remarks</td>
+    </tr>
+</table>
+</body>
+</html>
