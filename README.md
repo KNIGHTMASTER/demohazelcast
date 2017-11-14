@@ -1,2 +1,2 @@
 # demohazelcast
-Demo Hazelcast Application
+Demo Hazelcast Application Using Spring MVC
